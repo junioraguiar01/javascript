@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dia da semana</h1>
+    <div id="sem">
+
+    </div>
+    <h2>Escolha um numero de 0 a 6 <input type="number" name="" id="nu" min="0" max="7"><input type="button" value="confirmar"  onclick="semana()"></h2>
+    <div id="sm"></div>
+    <script>
+        var dia = new Date()
+        var ds = dia.getDay()
+        var res = document.getElementById('sem')
+        switch(ds){
+            case 0:
+                res.innerText = 'Domingo'
+                break
+                case 1:
+                    res.innerText = 'Segunda Feira'
+                    break
+                    case 2: 
+                    res.innerText = 'Terça Feira'
+                    break
+                    case 3: 
+                    res.innerText = 'Quarta Feira'
+                    break
+                    case 4: 
+                    res.innerText = 'Quinta Feira'
+                    break
+                    case 5: 
+                    res.innerText = 'Sexta Feira'
+                    break
+                    case 6: 
+                    res.innerText = 'Sabádo'
+                    break
+                  
+        }
+        function semana(){
+            var numero = document.getElementById('nu')
+            var rs = document.getElementById('sm')
+            var ds = parseInt(numero.value) 
+            switch(ds){
+                case 0:
+                    rs.innerText = 'Domingo'
+                    break
+                    case 1:
+                        rs.innerText = 'Segunda Feira'
+                        break
+                        case 2: 
+                        rs.innerText = 'Terça Feira'
+                        break
+                        case 3: 
+                        rs.innerText = 'Quarta Feira'
+                        break
+                        case 4: 
+                        rs.innerText = 'Quinta Feira'
+                        break
+                        case 5: 
+                        rs.innerText = 'Sexta Feira'
+                        break
+                        case 6: 
+                        rs.innerText = 'Sabádo'
+                        break
+                        default:
+                            rs.innerText = '[ERRO] Um Numero de 0 a 6 Voçê e Burro'
+                        }
+                    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Que horas são <input type="number" name="" id="txthora">
+    <input type="button" value="confirmar" onclick="mostrahora()"></h1>
+    <div id="res">
+
+    </div>
+    <h1>horario do pc</h1>
+    <div id="resu"></div>
+    <script>
+        function mostrahora(){
+           var horra = document.getElementById('txthora')
+           var res = document.getElementById('res')
+           var hora = horra.value
+
+          if(hora < 6){
+            res.innerHTML = '<p>Boa madrugada </P>'
+          }
+          else if(hora < 12){
+            res.innerHTML = '<p>Bom Dia</p>'
+          }
+          else if( hora <= 18){
+            res.innerHTML = '<p>Boa Tarde</p>'
+          }
+          else{
+            res.innerHTML = '<p>Boa Noite</p>'
+          }
+          res.innerHTML += '<p>Agora é ' +hora+ 'Horas</p>'
+            
+        }
+                   var horaa = new Date()
+           var horas =horaa.getHours()
+           var re = document.getElementById('resu')
+           
+
+          if(horas < 6){
+            re.innerHTML = '<p>Boa madrugada </P>'
+          }
+          else if(horas < 12){
+            re.innerHTML = '<p>Bom Dia</p>'
+          }
+          else if( horas <= 18){
+            re.innerHTML = '<p>Boa Tarde</p>'
+          }
+          else{
+            res.innerHTML = '<p>Boa Noite</p>'
+          }
+          re.innerHTML += '<p>Agora é ' +horas+ 'Horas</p>'
+    </script>
+    
+</body>
+</html>

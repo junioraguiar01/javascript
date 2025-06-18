@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+   <h1>Voçê é de qual pais: <input type="text" id="txpais"> <input  type="button" value="?" onclick="n2()"></h1>
+   <div id="res">
+
+   </div>
+
+   <script>
+    function n2(){
+        var input = document.getElementById('txpais')
+        var res = document.getElementById('res')
+        pais = String(input.value).trim().toLowerCase()
+        res.innerText = 'Voçê e do '+pais
+    
+        if(pais == "brasil") {
+            res.innerHTML += "<p>Então voçê é Brasileiro</p>"
+        }
+        else{
+            res.innerHTML += '<p>Então voçê é Gringo</p>'
+        }
+    }
+
+   </script>
+</body>
+</html>
