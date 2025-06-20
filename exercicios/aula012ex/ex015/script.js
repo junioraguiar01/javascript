@@ -15,37 +15,34 @@ function verificar(){
         if (fsex[0].checked) {
             gênero = 'Homem'
             if (idade >=0 && idade < 10) {
-                //criança
                 img.setAttribute('src', 'imagens/foto-bebe-m.png')
             }
            else if (idade < 21){
-                    //jovem
-                    img.setAttribute('src', 'imagens/homem.png')
+                    img.setAttribute('src', 'imagens/foto-jovem-m.png')
             }
             else if (idade < 50) {
-                //
-                img.setAttribute('src', 'imagens/homem.png')
+                img.setAttribute('src', 'imagens/foto-adulto-m.png')
             }
             else {
-                //idoso
-                img.setAttribute('src', 'imagens/homem.png')
+                img.setAttribute('src', 'imagens/foto-idoso-m.png')
             }
         }else if (fsex[1].checked) {
             gênero = 'Mulher'
-              if (idade >=0 && idade < 10) {
-                //criança
+                       if (idade >=0 && idade < 10) {
+                img.setAttribute('src', 'imagens/foto-bebe-f.png')
             }
-                else if (idade < 21){
-                    //jovem
+           else if (idade < 21){
+                    img.setAttribute('src', 'imagens/foto-jovem-f.png')
             }
             else if (idade < 50) {
-                //Adulto
+                img.setAttribute('src', 'imagens/foto-adulto-f.png')
             }
             else {
-                //idoso
+                img.setAttribute('src', 'imagens/foto-idoso-f.png')
             }
         }
         res.style.textAlign = 'center'
-        res.innerHTML = 'Você tem '+idade+ ' Anos. você é '+gênero
+        res.innerHTML = '<p>Você tem '+idade+ ' Anos.</p>'
+        res.appendChild(img)
     }
 }
